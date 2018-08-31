@@ -130,6 +130,19 @@ chmod +x squidconf
 ./squidconf
 wget https://raw.githubusercontent.com/twossh/virustrojan/master/payloads -O /etc/payloads
 
+sed -i '3i\127.0.0.1 d1n212ccp6ldpw.cloudfront.net\' /etc/hosts
+sleep 1
+sed -i '4i\127.0.0.1 portalrecarga.vivo.com.br/recarga\' /etc/hosts
+sleep 1
+sed -i '5i\127.0.0.1 portalrecarga.vivo.com.br/controle\' /etc/hosts
+sleep 1
+sed -i '6i\127.0.0.1 navegue.vivo.com.br/pre\' /etc/hosts
+sleep 1
+sed -i '7i\127.0.0.1 navegue.vivo.com.br/controle\' /etc/hosts
+sleep 1
+sed -i '8i\127.0.0.1 /\' /etc/hosts
+sleep 1
+
 ssh-keygen -A
 
 /etc/init.d/ssh restart
