@@ -21,7 +21,6 @@ branco="\033[1;37m"
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s' "MENU OPENVPN E SSH" ; tput sgr0
 
 echo ""
-echo -e "\033[1;37mOBS: Digite - \033[0;33mmenu \033[1;37m- para acessar o PACK"
 echo -e "\033[0;32m| 0|\033[1;31m• Sair \033[0;37m(Para sair do script)\033[0m"
 echo -e "| 1|\033[1;31m• UserCreate \033[0;37m(Criar usuarios SSH)\033[0m"
 echo -e "| 2|\033[1;31m• UserBackup \033[0;37m(Gerencia backup dos usuarios SSH)\033[0m"
@@ -43,7 +42,8 @@ echo -e "|17|\033[1;31m• LimparVencidos \033[0;37m(Limpar usuarios vencidos)\0
 echo -e "|18|\033[1;31m• KernelControl \033[0;37m(Procurar update do Kernel ou Remove)\033[0m"
 echo -e "|19|\033[1;31m• Reboot \033[0;37m(Reinicia o servidor)\033[0m"
 echo -e "|20|\033[1;31m• ReiniciarServicos \033[0;37m(SSH, VPN e ProxySquid)\033[0m"
-echo -e "Escreva \033[0;33mmenudev \033[1;37mpara ver mais opções de administrador"
+echo -e "Digite - \033[0;33mmenudev \033[1;37m- para ver opções de administrador"
+echo -e "\033[1;37mOBS: Digite - \033[0;33mmenu \033[1;37m- para acessar este sistema"
 echo""
 read -p " Selecione a opção [0-24]: " opcao
 
