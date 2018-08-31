@@ -1,6 +1,6 @@
 #!/bin/bash
 IP=$(wget -4qO- "http://whatismyip.akamai.com/")
-echo 'SQUID UBUNTU'
+echo 'SQUID CONFIG'
 rm -rf /etc/squid/squid.conf
 touch /etc/squid/squid.conf
 echo 'acl ip dstdomain '$IP > /etc/squid/squid.conf
@@ -26,18 +26,15 @@ http_access allow netflix
 http_access allow videoprime
 
 http_port 80
-http_port 8080
-http_port 8799
-http_port 3128
 
-visible_hostname RNEOXBRASIL
+visible_hostname SSH-OPENVPN
 
 http_access deny all
 
 via off
 forwarded_for off' >> /etc/squid/squid.conf
 
-echo 'SQUID DEBIAN'
+echo 'SQUID CONFIG'
 rm -rf /etc/squid3/squid.conf
 touch /etc/squid3/squid.conf
 echo 'acl ip dstdomain '$IP > /etc/squid3/squid.conf
@@ -63,9 +60,6 @@ http_access allow netflix
 http_access allow videoprime
 
 http_port 80
-http_port 8080
-http_port 8799
-http_port 3128
 
 visible_hostname RNEOXBRASIL
 
