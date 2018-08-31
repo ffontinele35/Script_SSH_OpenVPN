@@ -21,7 +21,7 @@ branco="\033[1;37m"
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s' "MENU OPENVPN E SSH" ; tput sgr0
 
 echo ""
-echo -e OBS: Digite - menu - para acessar o PACK
+echo -e "\033[1;37mOBS: Digite - \033[0;33mmenu \033[1;37m- para acessar o PACK"
 echo -e "\033[0;32m| 0|• Sair \033[0;37m(Para sair do script)\033[0m"
 echo -e "| 1|\033[01;31m• UserCreate \033[0;37m(Criar usuarios SSH)\033[0m"
 echo -e "| 2|\033[01;31m• UserBackup \033[0;37m(Gerencia backup dos usuarios SSH)\033[0m"
