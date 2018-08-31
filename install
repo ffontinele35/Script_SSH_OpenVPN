@@ -81,8 +81,6 @@ chmod +x /bin/UserClear
 wget https://raw.githubusercontent.com/twossh/virustrojan/master/LimiterSSH -O /bin/LimiterSSH
 chmod +x /bin/LimiterSSH
 
-wget https://raw.githubusercontent.com/twossh/virustrojan/master/MonitorTotal -O /bin/MonitorTotal.sh
-chmod +x /bin/MonitorTotal.sh
 
 wget https://raw.githubusercontent.com/twossh/virustrojan/master/MudarLimite -O /bin/MudarLimite
 chmod +x /bin/MudarLimite
@@ -113,9 +111,6 @@ chmod +x /bin/DadosMonitor
 
 wget https://raw.githubusercontent.com/twossh/virustrojan/master/OpenVPN -O /bin/OpenVPN
 chmod +x /bin/OpenVPN
-
-wget https://raw.githubusercontent.com/twossh/virustrojan/master/statusvpn -O /bin/statusvpn
-chmod +x /bin/statusvpn
 
 wget https://raw.githubusercontent.com/twossh/virustrojan/master/restservice -O /bin/restservice
 chmod +x /bin/restservice
