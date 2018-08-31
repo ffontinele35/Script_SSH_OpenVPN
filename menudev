@@ -19,36 +19,37 @@ purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "____MENU DE EDIÇÕES ADMINISTRATIVAS____" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "MENU DE EDIÇÕES ADMINISTRATIVAS" ; tput sgr0
 echo ""
 echo -e OBS: Digite - menu - para acessar o PACK
-echo -e "| 0|\033[01;31m• Editar OpenSSH\033[0m"
-echo -e "| 1|\033[01;31m• Editar OpenVPN\033[0m"
-echo -e "| 2|\033[01;31m• Editar Squid3 \033[1;33mDebian8/Ubuntu14\033[0m"
-echo -e "| 3|\033[01;31m• Editar Squid3 \033[1;35mDebian9/Ubuntu16+\033[0m"
+echo -e "| 0|\033[1;31m• Editar OpenSSH\033[0m"
+echo -e "| 1|\033[1;31m• Editar OpenVPN\033[0m"
+echo -e "| 2|\033[1;31m• Editar Squid3 \033[1;33mDebian8/Ubuntu14\033[0m"
+echo -e "| 3|\033[1;31m• Editar Squid3 \033[1;33mDebian9/Ubuntu16+\033[0m"
 echo -e "| 4|\033[0;32m• Atualizar aplicativos do sistema\033[0m"
 echo -e "| 5|\033[0;32m• Atualizar sistema operacional\033[0m"
-echo -e "| 6|\033[01;31m• Alterar relogio do servidor\033[0m"
-echo -e "| 7|\033[01;31m• Registros de erros do OpenVPN\033[0m"
-echo -e "| 8|\033[01;31m• Limpar cache de escritas\033[0m"
-echo -e "| 9|\033[01;31m• Lista de payloads|hosts do Squid3\033[0m"
-echo -e "|10|\033[01;31m• Logs de acessos Squid3 \033[1;33mDebian8/Ubuntu14\033[0m"
-echo -e "|11|\033[01;31m• Logs de acessos Squid3 \033[1;35mDebian9/Ubuntu16+\033[0m"
-echo -e "|12|\033[01;31m• Trocar senha do root\033[0m"
-echo -e "|13|\033[01;31m• Status de configuração de rede\033[0m"
-echo -e "|14|\033[01;32m• Upgrade \033[1;35mUbuntu O.S.\033[0m"
-echo -e "|15|\033[01;31m• Reboot (Reinicia o servidor)\033[0m"
-echo -e "|16|\033[01;31m• ReiniciarServicos (SSH, VPN e ProxySquid)\033[0m"
-echo -e Segure CTRL + X para fechar as edicoes.
+echo -e "| 6|\033[1;31m• Alterar relogio do servidor\033[0m"
+echo -e "| 7|\033[1;31m• Registros de erros do OpenVPN\033[0m"
+echo -e "| 8|\033[1;31m• Limpar cache de escritas\033[0m"
+echo -e "| 9|\033[1;31m• Lista de payloads|hosts do Squid3\033[0m"
+echo -e "|10|\033[1;31m• Logs de acessos Squid3 \033[1;33mDebian8/Ubuntu14\033[0m"
+echo -e "|11|\033[1;31m• Logs de acessos Squid3 \033[1;33mDebian9/Ubuntu16+\033[0m"
+echo -e "|12|\033[1;31m• Trocar senha do root\033[0m"
+echo -e "|13|\033[1;31m• Status de configuração de rede\033[0m"
+echo -e "|14|\033[1;32m• Upgrade \033[1;33mUbuntu O.S.\033[0m"
+echo -e "|15|\033[1;31m• Hosts (/etc/hosts)\033[0m"
+echo -e "|16|\033[1;31m• Payloads (/etc/payloads)\033[0m"
+echo -e "|17|\033[1;32m• Mudar porta do OPENVPN 443 e SSH 22\033[0;32m"
+echo -e "|18|\033[0;32m• Mudar porta do SSH 443 e 22 E OPENVPN 1194\033[0m"
+echo -e "|19|\033[0;31m• Reboot (Reinicia o servidor)\033[0m"
+echo -e "|20|\033[1;31m• ReiniciarServicos (SSH, VPN e ProxySquid)\033[0m"
+echo -e "|21|\033[1;33m• Voltar \033[1;31m(Voltar ao menu inicial)\033[0m"
+echo -e Segure CTRL + X + Y para fechar as edicoes.
 echo -e Segure CTRL + C para fechar logs.
-echo -e Escreva menu para voltar ao menu de gerenciamento.
 echo""
 read -p " Selecione a opção [0-16]: " opcao
 
 case $opcao in
-  menu)
-  sleep 1
-  menu;;
  0)
   nano /etc/ssh/sshd_config
   sleep 1
@@ -110,10 +111,32 @@ case $opcao in
   sleep 1
   menudev;;
  15)
- echo -e Reiniciando o servidor aguarde...
-  reboot;;
+ echo -e "\033[1;33mUSE AS TECLAS \033[1;32mCTRL X Y \033[1;33mPARA SALVAR\033[1;37m"
+ sleep 3
+ nano /etc/hosts
+ sleep 1
+ menudev;;
  16)
+ echo -e "\033[1;33mUSE AS TECLAS \033[1;32mCTRL X Y \033[1;33mPARA SALVAR\033[1;37m"
+ sleep 3
+ nano /etc/payloads
+ sleep 1
+ menudev;;
+ 17)
+  ConfVPN
+  sleep 1
+  menudev;;
+ 18)
+  ConfVPS
+  sleep 1
+  menudev;;
+ 19)
+  echo -e Reiniciando o servidor aguarde...
+  reboot;;
+ 20)
   restservice
   sleep 1
   menudev;;
+ 21)
+ menu;;
 esac
