@@ -1,5 +1,4 @@
 #!/bin/bash
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%50s%s%-20s\n' "BadVPN Setup 1.3 RneoX" ; tput sgr0
 if [ ! -e "/bin/badvpn-udpgw" ]; then
 cd $HOME
 echo -e "\033[1;32mAGUARDE..." 
