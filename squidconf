@@ -61,7 +61,7 @@ http_access allow videoprime
 
 http_port 80
 
-visible_hostname RNEOXBRASIL
+visible_hostname SSH-OPENVPN
 
 http_access deny all
 
