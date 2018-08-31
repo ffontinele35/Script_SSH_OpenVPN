@@ -18,11 +18,10 @@ purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s' "MENU OPENVPN E SSH RNEOX PREMIUM" ;
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s' "MENU OPENVPN E SSH" ;
 
 echo ""
-echo ""
-echo -e OBS: Digite - menu - para acessar o PACK RNEOX PREMIUM
+echo -e OBS: Digite - menu - para acessar o PACK
 echo -e "\033[0;32m| 0|• Mudar porta do OPENVPN 443 e SSH 22\033[0;32m"
 echo -e "| 1|\033[0;32m• Mudar porta do SSH 443 e 22 E OPENVPN 8090\033[0m"
 echo -e "| 2|\033[01;31m• UserCreate \033[0;37m(Criar usuarios SSH)\033[0m"
@@ -44,16 +43,19 @@ echo -e "|17|\033[01;31m• addhost \033[0;37m(Adiciona novo host ao squid)\033[
 echo -e "|18|\033[01;31m• OpenVPN Instalador \033[0;37m(Só execute isso uma única vez)\033[01;36m"
 echo -e "|19|\033[01;31m• LimparVencidos \033[0;37m(Limpar usuarios vencidos)\033[0m"
 echo -e "|20|\033[01;31m• KernelControl \033[0;37m(Procurar update do Kernel ou Remove)\033[0m"
-echo -e "|21|\033[01;31m• SSHMonitor \033[0;37m(Monitorar o total de conectados no SSH)\033[0m"
-echo -e "|22|\033[01;31m• VPNMonitor \033[0;37m(Monitora os usuarios conectados no VPN)\033[0m"
-echo -e "|23|\033[01;31m• Reboot \033[0;37m(Reinicia o servidor)\033[0m"
-echo -e "|24|\033[01;31m• ReiniciarServicos \033[0;37m(SSH, VPN e ProxySquid)\033[0m"
+echo -e "|21|\033[01;31m• Reboot \033[0;37m(Reinicia o servidor)\033[0m"
+echo -e "|22|\033[01;31m• ReiniciarServicos \033[0;37m(SSH, VPN e ProxySquid)\033[0m"
 echo -e Segure CTRL + C para fechar o menu
 echo -e Escreva menudev para ver mais opções de administrador
 echo""
 read -p " Selecione a opção [0-24]: " opcao
 
 case $opcao in
+ 
+  menudev)
+  menudev
+  sleep 1
+  menu;;
  0)
   ConfVPN
   sleep 1
@@ -129,17 +131,9 @@ case $opcao in
   sleep 1
   menu;;
  21)
-  MonitorTotal.sh
-  sleep 7
-  menu;;
- 22)
-  statusvpn
-  sleep 7
-  menu;;
- 23)
  echo -e Reiniciando o servidor aguarde...
   reboot;;
- 24)
+ 22)
   restservice
   sleep 1
   menu;;
