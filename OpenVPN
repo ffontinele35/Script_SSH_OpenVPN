@@ -426,6 +426,7 @@ float" > /etc/openvpn/client-common.txt
 	echo "Concluido!"
 	echo ""
 	echo "Seu arquivo está disponivel em" ~/"$CLIENT.ovpn"
+sleep 4
 fi
 
 rm -rf /etc/ssh/sshd_config
