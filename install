@@ -160,7 +160,7 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 # menu
 cd
 echo "menu" >> .bash_profile
-rm /root/install.sh
+rm /root/install
 cat /dev/null > ~/.bash_history && history -c && clear
 echo -e "\033[1;31m• \033[1;32mINSTALACAO CONCLUIDA !\033[0m"
 echo ""
