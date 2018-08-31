@@ -2,7 +2,7 @@
 if [ ! -e "/bin/badvpn-udpgw" ]; then
 cd $HOME
 echo -e "\033[1;32mAGUARDE..." 
-wget https://www.dropbox.com/s/tgkxdwb03r7w59r/badvpn-udpgw -o /dev/null
+wget https://www.dropbox.com/s/tgkxdwb03r7w59r/badvpn-udpgw -o > /dev/null 2>&1
 mv -f $HOME/badvpn-udpgw /bin/badvpn-udpgw
 chmod 777 /bin/badvpn-udpgw
 sleep 2
