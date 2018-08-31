@@ -37,8 +37,8 @@ echo -e "|12|\033[1;31m• Status de configuração de rede \033[0;37mifconfig\0
 echo -e "|13|\033[1;31m• \033[0;32mUpgrade \033[0;37mAtualizar versão do sistema \033[0;33mUBUNTU\033[0m"
 echo -e "|14|\033[1;31m• Editar Hosts OpenVPN \033[0;37m/etc/hosts\033[0m"
 echo -e "|15|\033[1;31m• Editar Payloads Squid \033[0;37m/etc/payloads\033[0m"
-echo -e "|16|\033[1;31m• \033[0;31mMudar porta OPENVPN \033[0;37m443 \033[0;31me \033[0;37mSSH 22\033[0m"
-echo -e "|17|\033[1;31m• \033[0;31mMudar porta SSH \033[0;37m443 \033[0;31me \033[0;37m22 \033[0;31mOPENVPN \033[0;37m1194\033[0m"
+echo -e "|16|\033[1;31m• Mudar porta OPENVPN \033[0;37m443 \033[1;31me \033[0;37mSSH 22\033[0m"
+echo -e "|17|\033[1;31m• Mudar porta SSH \033[0;37m443 \033[1;31me \033[0;37m22 \033[1;31mOPENVPN \033[0;37m1194\033[0m"
 echo -e "|18|\033[1;31m• Reboot \033[0;37mReinicia o servidor\033[0m"
 echo -e "|19|\033[1;31m• ReiniciarServicos \033[0;37mSSH, VPN e ProxySquid\033[0m"
 echo -e Segure CTRL + X + Y para fechar as edicoes.
