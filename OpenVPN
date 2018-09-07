@@ -207,7 +207,7 @@ else
 	esac
 	echo ""
 	echo "Qual porta você deseja usar ?"
-	read -p "Port: " -e -i 8090 PORT
+	read -p "Port: " -e -i 443 PORT
 	echo ""
 	echo "Qual DNS você deseja usar ?"
 	echo "   1) Sistema(Não Recomendado)"
@@ -405,7 +405,7 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote /t.me/Fontinele $PORT
-http-proxy-option CUSTOM-HEADER Host portalrecarga.vivo.com.br/recarga
+http-proxy-option CUSTOM-HEADER Host navegue.vivo.com.br/pre
 http-proxy $IP 80
 resolv-retry infinite
 nobind
