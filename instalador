@@ -96,7 +96,7 @@ chmod +x /bin/ConfVPS
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/ConfVPN -O /bin/ConfVPN
 chmod +x /bin/ConfVPN
 
-wget https://raw.githubusercontent.com/toriello/virustrojan/master/MudarValidade -O /bin/MudarValidade
+wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/MudarValidade -O /bin/MudarValidade
 chmod +x /bin/MudarValidade
 
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/VNC -O /bin/VNC
