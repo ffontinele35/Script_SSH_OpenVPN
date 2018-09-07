@@ -44,7 +44,7 @@ echo -e "|19|\033[1;31m• ReiniciarServicos \033[0;37mSSH, VPN e ProxySquid\033
 echo -e Segure CTRL + X + Y para fechar as edicoes.
 echo -e Segure CTRL + C para fechar logs.
 echo""
-read -p " Selecione a opção [0-16]: " opcao
+read -p " Selecione a opção [0-19]: " opcao
 
 case $opcao in
   0)
