@@ -26,7 +26,7 @@ status openvpn-status.log
 verb 3
 crl-verify crl.pem
 client-to-client
-#duplicate-cn
+duplicate-cn
 client-cert-not-required
 username-as-common-name
 plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so login
