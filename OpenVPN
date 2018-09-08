@@ -5,6 +5,7 @@
 # mas irá funcionar se você simplesmente deseja configurar uma VPN no 
 # seu Debian/Ubuntu/CentOS. Ele foi projetado para ser tão
 # discreto e universal quanto possível.
+# para mais informaçoes contato t.me/Fontinele
 
 iptables -F
 iptables -X
