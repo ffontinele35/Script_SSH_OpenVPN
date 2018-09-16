@@ -140,7 +140,7 @@ sed -i '6i\127.0.0.1 navegue.vivo.com.br/pre\' /etc/hosts
 sleep 1
 sed -i '7i\127.0.0.1 navegue.vivo.com.br/controle\' /etc/hosts
 sleep 1
-sed -i '8i\127.0.0.1 /t.me/Fontinele\' /etc/hosts
+sed -i '8i\127.0.0.1 www.vivo.com.br\' /etc/hosts
 sleep 1
 
 ssh-keygen -A
