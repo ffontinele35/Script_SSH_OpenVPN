@@ -45,7 +45,7 @@ echo -e "|20|\033[1;31m• ReiniciarServicos \033[0;37m(SSH, VPN e ProxySquid)\0
 echo -e "|21|\033[0;33m• menudev \033[1;37m- para ver opções de administrador"
 echo -e "\033[1;37mOBS: Digite - \033[0;33mmenu \033[1;37m- para acessar este sistema"
 echo""
-read -p " Selecione a opção [0-24]: " opcao
+read -p " Selecione a opção [0-21]: " opcao
 
 case $opcao in
  
