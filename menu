@@ -42,7 +42,7 @@ echo -e "|17|\033[1;31m• LimparVencidos \033[0;37m(Limpar usuarios vencidos)\0
 echo -e "|18|\033[1;31m• KernelControl \033[0;37m(Procurar update do Kernel ou Remove)\033[0m"
 echo -e "|19|\033[1;31m• Reboot \033[0;37m(Reinicia o servidor)\033[0m"
 echo -e "|20|\033[1;31m• ReiniciarServicos \033[0;37m(SSH, VPN e ProxySquid)\033[0m"
-echo -e "Digite - \033[0;33mmenudev \033[1;37m- para ver opções de administrador"
+echo -e "|21|\033[0;33m• menudev \033[1;37m- para ver opções de administrador"
 echo -e "\033[1;37mOBS: Digite - \033[0;33mmenu \033[1;37m- para acessar este sistema"
 echo""
 read -p " Selecione a opção [0-24]: " opcao
@@ -129,6 +129,10 @@ case $opcao in
   reboot;;
  20)
   restservice
+  sleep 1
+  menu;;
+  21)
+  menudev
   sleep 1
   menu;;
 esac
