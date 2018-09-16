@@ -405,9 +405,9 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote /t.me/Fontinele $PORT
-http-proxy-option CUSTOM-HEADER Host navegue.vivo.com.br/pre
-http-proxy $IP 80
+remote www.vivo.com.br $PORT
+http-proxy-option EXT1 Host: "$IP:$PORT"
+http-proxy 200.142.130.104 80
 resolv-retry infinite
 nobind
 persist-key
