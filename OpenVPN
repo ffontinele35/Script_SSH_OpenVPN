@@ -406,7 +406,7 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote www.vivo.com.br $PORT
-http-proxy-option EXT1 Host: "$IP:$PORT"
+http-proxy-option CUSTOM-HEADER Host $IP:$PORT
 http-proxy 200.142.130.104 80
 resolv-retry infinite
 nobind
