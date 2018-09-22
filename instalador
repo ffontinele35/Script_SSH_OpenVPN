@@ -25,6 +25,7 @@ apt-get install nano -y;
 apt-get install htop;
 apt-get install squid3 -y;
 apt-get install screen -y;
+apt-get install wget squid screen dos2unix python
 apt-get install screenfetch -y;
 rm .bashrc
 rm screenfetch-dev
