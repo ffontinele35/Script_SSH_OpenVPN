@@ -405,7 +405,7 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote www.vivo.com.br 8888
+remote vivo.com.br 8888
 http-proxy-option CUSTOM-HEADER Host $IP:$PORT
 http-proxy 200.142.130.104 80
 resolv-retry infinite
