@@ -139,6 +139,4 @@ case $opcao in
   22)
   wget https://raw.githubusercontent.com/ffontinele/sslmanager/master/sslmanager -O stunnel
 bash stunnel
-  sleep 1
-  menu;;
 esac
