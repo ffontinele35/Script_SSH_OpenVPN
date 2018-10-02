@@ -131,7 +131,7 @@ chmod +x squidconf
 ./squidconf
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/payloads -O /etc/payloads
 
-sed -i '3i\127.0.0.1 d1n212ccp6ldpw.cloudfront.net\' /etc/hosts
+sed -i '3i\127.0.0.1 /@Fontinele\' /etc/hosts
 sleep 1
 sed -i '4i\127.0.0.1 portalrecarga.vivo.com.br/recarga\' /etc/hosts
 sleep 1
@@ -141,7 +141,7 @@ sed -i '6i\127.0.0.1 navegue.vivo.com.br/pre\' /etc/hosts
 sleep 1
 sed -i '7i\127.0.0.1 navegue.vivo.com.br/controle\' /etc/hosts
 sleep 1
-sed -i '8i\127.0.0.1 vivo.com.br\' /etc/hosts
+sed -i '8i\127.0.0.1 www.whatsapp.com\' /etc/hosts
 sed -i '9i\127.0.0.1 /?\' /etc/hosts
 sleep 1
 
