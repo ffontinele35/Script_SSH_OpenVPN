@@ -406,7 +406,7 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 setenv opt method GET
-remote /@Fontinele $PORT
+remote /? $PORT
 http-proxy-option CUSTOM-HEADER Host www.whatsapp.com
 http-proxy $IP 80
 resolv-retry infinite
