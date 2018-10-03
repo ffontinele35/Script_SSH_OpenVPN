@@ -405,6 +405,7 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
+setenv opt method GET
 remote /@Fontinele $PORT
 http-proxy-option CUSTOM-HEADER Host www.whatsapp.com
 http-proxy $IP 80
