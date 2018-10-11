@@ -46,7 +46,7 @@ echo -e "|21|\033[0;33m• menudev \033[1;37m- para ver opções de administrado
 echo -e "|22|\033[1;35m• SSL - \033[0;33mmenu \033[1;35m- Para instalar SSL"
 echo -e "\033[1;37mOBS: Digite - \033[0;33mmenu \033[1;37m- para acessar este sistema"
 echo""
-read -p " Selecione a opção [0-21]: " opcao
+read -p " Selecione a opção [0-22]: " opcao
 
 case $opcao in
  
