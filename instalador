@@ -37,7 +37,7 @@ apt-get install nethogs -y;
 apt-get install nload;
 apt-get install wget;
 apt-get install screen;
-apt-get install python-pip -y;
+apt-get install python -y
 wget https://raw.githubusercontent.com/ffontinele/squidssh/master/pythonsocks.py
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
