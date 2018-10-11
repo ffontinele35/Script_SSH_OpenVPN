@@ -32,11 +32,13 @@ rm screenfetch-dev
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/.bashrc
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/screenfetch-dev
 clear
-apt-get install python-pip -y;
-apt-get install python
 pip install speedtest-cli;
 apt-get install nethogs -y;
 apt-get install nload;
+apt-get install wget;
+apt-get install screen;
+apt-get install python-pip -y;
+wget https://raw.githubusercontent.com/ffontinele/squidssh/master/pythonsocks.py
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
@@ -124,7 +126,6 @@ chmod +x /bin/menu
 
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/menudev -O /bin/menudev
 chmod +x /bin/menudev
-wget https://raw.githubusercontent.com/ffontinele/squidssh/master/pythonsocks.py
 
 rm -rf /etc/ssh/sshd_config
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/sshd_config2 -O /etc/ssh/sshd_config
