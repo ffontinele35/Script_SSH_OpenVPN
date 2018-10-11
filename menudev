@@ -130,6 +130,7 @@ case $opcao in
   sleep 1
   menudev;;
    20)
+  screen
   python pythonsocks.py
   sleep 1
   menudev;;
