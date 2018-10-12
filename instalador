@@ -170,3 +170,4 @@ cat /dev/null > ~/.bash_history && history -c && clear
 echo -e "\033[1;31m• \033[1;32mINSTALACAO CONCLUIDA !\033[0m"
 echo ""
 echo -e "\033[1;31m• \033[1;32mENTRE NO SISTEMA DIGITANDO: \033[1;33mmenu\033[0m"
+menu
