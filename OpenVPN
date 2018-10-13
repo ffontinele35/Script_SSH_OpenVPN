@@ -432,7 +432,7 @@ sleep 4
 fi
 
 rm -rf /etc/ssh/sshd_config
-wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/sshd_config -O /etc/ssh/sshd_config
+wget https://raw.githubusercontent.com/ffontinele35/Script_SSH_OpenVPN/master/sshd_config -O /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 service ssh restart
 /etc/init.d/openvpn restart
