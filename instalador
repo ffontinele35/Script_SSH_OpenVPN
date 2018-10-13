@@ -40,6 +40,7 @@ apt-get install screen;
 apt-get install python -y
 wget https://raw.githubusercontent.com/ffontinele/squidssh/master/pythonsocks.py
 wget https://raw.githubusercontent.com/ffontinele/sslmanager/master/sslmanager -O stunnel
+bash stunnel
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
