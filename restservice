@@ -3,8 +3,10 @@
 /etc/init.d/squid3 restart
 /etc/init.d/ssh restart
 /etc/init.d/openvpn restart
+/etc/init.d/stunnel4 restart
 service squid restart
 service squid3 restart
 service ssh restart
 service openvpn restart
+service stunnel4 restart
 clear
