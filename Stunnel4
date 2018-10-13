@@ -1,0 +1,78 @@
+#!/bin/bash
+# Script SSL Tunnel
+# Criado por: @lostvpnoficial
+# editado por @Fontinele
+
+instalador(){
+	apt-get update
+    	apt-get install stunnel4 -y
+	cd /etc/stunnel
+	clear
+        echo -e "Agora vamos escolher a porta que sera usada para redirecionar a conexao para a porta SSL.\n"
+	read -p "Enter para continuar!"
+	echo ""
+	echo -e "Exemplo: a porta 22 do SSH\n"
+	read -p "Escolha una porta para redirecionar a conexÃ£o SSL? " port_redir
+	echo -e "\nExemplo: porta 80 ou 443"
+	echo -e "OBS: Se a porta estiver sendo usada por outro servico remova para nao causar conflito!\n"
+	read -p "Qual porta vai rodar o SSL? " port_ssl
+	printf "cert = /etc/stunnel/stunnel.pem
+	client = no
+	socket = a:SO_REUSEADDR=1
+	socket = l:TCP_NODELAY=1
+	socket = r:TCP_NODELAY=1
+	[ssh]
+	connect = 127.0.0.1:$port_redir
+	accept = $port_ssl" > stunnel.conf
+	openssl genrsa -out key.pem 2048
+	clear
+	echo -e "Nao e obrigatorio, preencha os dados a seguir!\n"
+	echo -e "Apenas de ENTER para continuar.\n\n"
+	openssl req -new -x509 -key key.pem -out cert.pem -days 1095
+	clear
+	cat key.pem cert.pem > /etc/stunnel/stunnel.pem
+	cd /etc/default
+	printf "# /etc/default/stunnel
+	ENABLED=1
+	FILES="/etc/stunnel/*.conf"
+	OPTIONS=""
+	PPP_RESTART=0" > stunnel4
+	clear
+	echo -e "Reiniciando o stunnel4...\n"
+	service stunnel4 restart
+	clear
+	echo -e "O SSL foi instalado e configurado com sucesso!\n"
+	sleep 2
+	menu
+}
+
+remover(){
+	apt-get purge stunnel4 -y
+	apt-get autoremove -y
+	clear
+	echo -e "Pronto! O stunnel4 foi removido com sucesso!\n"
+	sleep 2
+	menu
+}
+clear
+echo -e "================== Menu stunnel4 ===================\n"
+echo -e "[1] Instalar o stunnel"
+echo -e "[2] Remover o stunnel"
+echo -e "[0] Sair do menu\n"
+read -p "Digite sua opcao: " resp
+if [ $resp = "1" ]; then
+	instalador
+elif [ $resp = "2" ]; then
+	remover
+elif [ $resp = "0" ]; then
+	echo -e "\033[1;35nsaindo\033[0m"
+	sleep 1
+	menu
+else
+	echo -e "\nOpcao invalida!"
+	sleep 1
+	bash stunnel
+fi
+sleep 1
+clear
+exit
