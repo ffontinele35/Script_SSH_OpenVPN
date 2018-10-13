@@ -43,7 +43,7 @@ echo -e "\033[0;32m|18|\033[1;35m• KernelControl \033[0;37m(Procurar update do
 echo -e "\033[0;32m|19|\033[1;35m• Reboot \033[0;37m(Reinicia o servidor)\033[0m"
 echo -e "\033[0;32m|20|\033[1;35m• ReiniciarServicos \033[0;37m(SSH, VPN e ProxySquid)\033[0m"
 echo -e "\033[0;32m|21|\033[1;35m• menudev \033[1;37m- para ver opções de administrador"
-echo -e "\033[0;32m|22|\033[1;35m• SSL - \033[0;33mmenu \033[1;35m- Para instalar SSL"
+echo -e "\033[0;32m|22|\033[1;35m• SSL - \033[0;33m menu \033[1;35m- Para instalar SSL"
 echo -e "\033[0;32m OBS: Digite - \033[0;33mmenu \033[1;37m- para acessar este sistema"
 echo""
 read -p " Selecione a opção [0-22]: " opcao
