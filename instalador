@@ -39,7 +39,7 @@ apt-get install wget;
 apt-get install screen;
 apt-get install python -y
 wget https://raw.githubusercontent.com/ffontinele35/squidssh/master/pythonsocks.py
-wget https://raw.githubusercontent.com/ffontinele35/sslmanager/master/sslmanager -O stunnel
+wget https://github.com/ffontinele35/Script_SSH_OpenVPN/blob/master/Stunnel4 -O stunnel
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
