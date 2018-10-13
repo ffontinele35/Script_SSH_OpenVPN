@@ -46,7 +46,7 @@ echo -e "\033[0;32m|21|\033[1;35m• menudev \033[1;37m- para ver opções de ad
 echo -e "\033[0;32m|22|\033[1;35m• SSL - \033[0;33mmenu \033[1;35m- Para instalar SSL"
 echo -e "\033[0;32m OBS: Digite - \033[0;33mmenu \033[1;37m- para acessar este sistema"
 echo -e""
-read -p " Selecione a opção [0-22]: " opção
+read -p " Selecione a opção [0-22]: " opçao
 
 
 case $opcao in
