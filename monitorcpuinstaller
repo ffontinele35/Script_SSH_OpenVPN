@@ -3,5 +3,5 @@ echo "INSTALANDO MONITOR CPU..."
 sleep 2
 apt-get install htop -y
 clear
-wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/monitorcpu -O /bin/monitorcpu
+wget https://raw.githubusercontent.com/ffontinele35/Script_SSH_OpenVPN/master/monitorcpu -O /bin/monitorcpu
 chmod +x /bin/monitorcpu
