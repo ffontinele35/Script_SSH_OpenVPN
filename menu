@@ -60,7 +60,7 @@ case $opcao in
  0)
  echo -e "\033[1;35msaindo\033[0m"
  sleep 2
- exit;;exit
+ exit;;
  1)
   UserCreate
   sleep 1
