@@ -52,7 +52,6 @@ echo -e "\033[0;32m|21|\033[1;35m• Reboot \033[0;37mReinicia o servidor\033[0m
 echo -e "\033[0;32m|22|\033[1;35m• ReiniciarServicos \033[0;37mSSH, VPN e ProxySquid\033[0m"
 echo -e "\033[1;35m Segure CTRL + X + Y para fechar as edicoes.\n"
 echo -e "\033[1;35m Segure CTRL + C para fechar logs.\n"
-echo""
 read -p " Selecione a opção [0-22]: " opcao
 
 case $opcao in
