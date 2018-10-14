@@ -21,7 +21,7 @@ branco="\033[1;37m"
 
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "MENU DE EDIÇÕES ADMINISTRATIVAS" ; tput sgr0
 echo ""
-echo -e "\033[0;32m| 0|\033[1;35mVoltar ao menu inicial"
+echo -e "\033[0;32m| 0|\033[1;35mVoltar ao menu inicial[0m"
 echo -e "\033[0;32m| 1|\033[1;35m Editar OpenSSH \033[0;37m/etc/ssh/sshd_config\033[0m"
 echo -e "\033[1;32m==================OPENVPN================\n"
 echo -e "\033[0;32m| 2|\033[1;35m• Editar OpenVPN \033[0;37m/etc/openvpn/server.conf\033[0m"
