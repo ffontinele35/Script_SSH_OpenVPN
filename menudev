@@ -101,9 +101,9 @@ echo -e "\033[0mvoltando ao menu..."
   sleep 1
   menudev;;
  11)
-  passwd root
-  sleep 1
   nano /etc/default/stunnel4
+  sleep 1
+  menu;;
  12)
   nano /etc/stunnel/stunnel.conf
   sleep 1
