@@ -55,10 +55,10 @@ echo -e "\033[1;35m Segure CTRL + C para fechar logs.\n"
 read -p " Selecione a opção [0-22]: " opcao
 
 case $opcao in
- 0)
- echo -e "\033[0;37mvoltando ao menu\n"
- sleep 3
- menu;;
+  0)
+echo -e "\033[0mvoltando ao menu"
+  sleep 3
+  menu;;
  1)
   nano /etc/ssh/sshd_config
   sleep 1
