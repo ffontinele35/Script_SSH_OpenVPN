@@ -53,8 +53,8 @@ read -p " Selecione a opção [0-23]: " opcao
 
 case $opcao in
  
-  menudev)
-  menudev
+  menu)
+  menu
   sleep 2
   menu;;
  0)
