@@ -57,7 +57,7 @@ read -p " Selecione a opção [0-22]: " opcao
 
 case $opcao in
   0)
-echo -e "\033[0mvoltando ao menu..."
+echo -e "\033[1;35mVoltando ao menu\033[0m"
   sleep 3
   menu;;
  1)
