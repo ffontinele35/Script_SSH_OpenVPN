@@ -56,7 +56,7 @@ case $opcao in
   menudev)
   menudev
   sleep 2
-  CTRL + C
+  menu;;
  0)
  echo -e "\033[1;35mvoltando ao Sistema\033[0m"
  sleep 2
