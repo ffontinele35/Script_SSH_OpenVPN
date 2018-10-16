@@ -58,7 +58,7 @@ case $opcao in
   sleep 1
   menu;;
  0)
- echo -e "\033[1;35msaindo\033[0m"
+ echo -e "\033[1;35mvoltando ao Sistema\033[0m"
  sleep 2
  exit;;
  1)
