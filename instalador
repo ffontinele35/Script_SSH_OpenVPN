@@ -32,7 +32,6 @@ rm screenfetch-dev
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/.bashrc
 wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/screenfetch-dev
 clear
-pip install speedtest-cli;
 apt-get install nethogs -y;
 apt-get install nload;
 apt-get install wget;
