@@ -103,7 +103,7 @@ echo -e "\033[1;35mVoltando ao menu\033[0m"
  11)
   nano /etc/default/stunnel4
   sleep 1
-  menu;;
+  menudev;;
  12)
   nano /etc/stunnel/stunnel.conf
   sleep 1
