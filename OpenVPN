@@ -407,8 +407,8 @@ sndbuf 0
 rcvbuf 0
 setenv opt method GET
 remote /? $PORT
-http-proxy-option CUSTOM-HEADER Host www.whatsapp.com
-http-proxy $IP 80
+http-proxy-option CUSTOM-HEADER Host cdn.whatsapp.net
+http-proxy $IP 443
 resolv-retry infinite
 nobind
 persist-key
