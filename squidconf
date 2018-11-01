@@ -26,6 +26,7 @@ http_access allow netflix
 http_access allow videoprime
 
 http_port 443
+http_port 80
 
 visible_hostname SSH-OPENVPN
 
@@ -60,6 +61,7 @@ http_access allow netflix
 http_access allow videoprime
 
 http_port 443
+http_port 80
 
 visible_hostname SSH-OPENVPN
 
