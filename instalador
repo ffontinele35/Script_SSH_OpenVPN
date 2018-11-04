@@ -67,6 +67,9 @@ chmod +x /bin/ClearCache
 wget https://raw.githubusercontent.com/ffontinele35/Script_SSH_OpenVPN/master/usermonitor -O /bin/UserMonitor
 chmod +x /bin/UserMonitor
 
+wget https://raw.githubusercontent.com/ffontinele/virustrojan/master/MonitorOpenVPN -O /bin/MonitorOpenVPN
+chmod +x /bin/MonitorOpenVPN
+
 wget https://raw.githubusercontent.com/ffontinele35/Script_SSH_OpenVPN/master/OpenUdp -O /bin/OpenUDP
 chmod +x /bin/OpenUDP
 
