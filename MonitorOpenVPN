@@ -19,17 +19,17 @@ purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
-while :; do 
+
 
 monitor ()
 {
+while :; do 
 echo -e "\033[0;37m=×=×APARECERA SOMENTE SE HOUVER ALGUEM CONECTADO=×=×=×=×=\033[0;30m"
 echo -e ""
 echo -e "\033[0;37m=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\033[0;30m"
 echo -e "\033[47;30m        USUÁRIOS            |          CONEXÕES         \033[0m"
 echo -e "\033[0;37m=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\033[0;30m"
 echo -e ""
-
 for _user in $(awk -F: '$3>=1000 {print $1}' /etc/passwd); do
 if [[ ! -z $(cat /etc/openvpn/*.log|grep ,${_user},) ]]; then
 echo -e "------------------------------"
@@ -39,6 +39,7 @@ echo -e "Conexões: $_conn"
 echo -e "------------------------------"
 fi
 done
-sleep 10
+sleep 3
+done
 }
 monitor
