@@ -20,7 +20,6 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 
-
 monitor ()
 {
 while :; do 
@@ -34,7 +33,7 @@ echo -e "Conexões: $_conn"
 echo -e "------------------------------"
 fi
 done
-sleep 10
+sleep 4
 done
 }
 monitor
