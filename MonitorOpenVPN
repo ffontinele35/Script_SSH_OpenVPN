@@ -23,10 +23,10 @@ branco="\033[1;37m"
 monitor ()
 {
 while :; do 
+echo -e "\033[0;37m=×=×APARECERA SOMENTE SE HOUVER ALGUEM CONECTADO=×=×=×=×=\033[0;30m"
 echo -e "\033[0;37m=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\033[0;30m"
 echo -e "\033[47;30m        USUÁRIOS            |          CONEXÕES         \033[0m"
 echo -e "\033[0;37m=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\033[0;30m"
-echo -e "\033[0;37m=×=×aparecera somente se tiver alguem conectado×=×=×=×=×=\033[0;30m"
 for _user in $(awk -F: '$3>=1000 {print $1}' /etc/passwd); do
 if [[ ! -z $(cat /etc/openvpn/*.log|grep ,${_user},) ]]; then
 echo -e "------------------------------"
