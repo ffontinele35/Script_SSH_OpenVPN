@@ -1,0 +1,17 @@
+monitor ()
+{
+while :; do 
+clear
+for _user in $(awk -F: '$3>=1000 {print $1}' /etc/passwd); do
+if [[ ! -z $(cat /etc/openvpn/*.log|grep ,${_user},) ]]; then
+echo -e "------------------------------"
+_conn=$(cat /etc/openvpn/*.log|grep ,${_user},| wc -l)
+echo -e "Usuário: $_user"
+echo -e "Conexões: $_conn"
+echo -e "------------------------------"
+fi
+done
+sleep 3
+done
+}
+monitor
