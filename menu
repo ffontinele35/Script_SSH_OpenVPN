@@ -19,132 +19,133 @@ purpleClaro="\033[1;35m"
 cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "MENU DE EDIÇÕES ADMINISTRATIVAS" ; tput sgr0
-echo ""
-echo -e "\033[0;32m| 0|\033[1;35mVoltar ao menu inicial\n"
-echo -e "\033[0;32m| 1|\033[1;35m Editar OpenSSH \033[0;37m/etc/ssh/sshd_config\033[0m"
-echo -e "\033[1;32m==========OPENVPN==========\n"
-echo -e "\033[0;32m| 2|\033[1;35m• Editar OpenVPN \033[0;37m/etc/openvpn/server.conf\033[0m"
-echo -e "\033[0;32m| 3|\033[1;35m• Editar OpenVPN \033[0;37m/etc/openvpn/client-common.txt\033[0m"
-echo -e "\033[0;32m| 4|\033[1;35m• Editar Hosts OpenVPN \033[0;37m/etc/hosts\033[0m"
-echo -e "\033[0;32m| 5|\033[1;35m• Editar Payloads Squid \033[0;37m/etc/payloads\033[0m"
-echo -e "\033[0;32m| 6|\033[1;35m• Registros de erros do OpenVPN\033[0m"
-echo -e "\033[1;32m=========SQUID============\n"
-echo -e "\033[0;32m| 7|\033[1;35m• Editar Squid3 \033[0;37m/etc/squid3/squid.conf\033[0m"
-echo -e "\033[0;32m| 8|\033[1;35m• Editar Squid \033[0;37m/etc/squid/squid.conf\033[0m"
-echo -e "\033[0;32m| 9|\033[1;35m• Logs de acessos Squid3 \033[0;37m/var/log/squid3/access.log\033[0m"
-echo -e "\033[0;32m|10|\033[1;35m• Logs de acessos Squid \033[0;37m/var/log/squid/access.log\033[0m"
-echo -e "\033[1;32m==========STUNNEL=========\n"
-echo -e "\033[0;32m|11|\033[1;35m• Editar Stunnel4 \033[0;37m/etc/default/stunnel4\033[0m"
-echo -e "\033[0;32m|12|\033[1;35m• Editar Stunne.conf \033[0;37m/etc/stunnel/stunnel.conf\033[0m"
-echo -e "\033[1;32m==========SISTEMA=========\n"
-echo -e "\033[0;32m|13|\033[1;35m• Atualizar aplicativos do sistema\033[0m"
-echo -e "\033[0;32m|14|\033[1;35m• Atualizar sistema operacional\033[0m"
-echo -e "\033[0;32m|15|\033[1;35m• Alterar relogio do servidor \033[0;37mtzdata\033[0m"
-echo -e "\033[0;32m|16|\033[1;35m• Trocar senha do root \033[0;33m CUIDADO\033[0m"
-echo -e "\033[0;32m|17|\033[1;35m• Status de configuração de rede \033[0;37mifconfig\033[0m"
-echo -e "\033[0;32m|18|\033[1;35m• \033[0;32mUpgrade \033[0;37mAtualizar versão do sistema \033[0;33mUBUNTU\033[0m"
-echo -e "\033[1;32m======PORTAS DO SISTEMA===\n"
-echo -e "\033[0;32m|19|\033[1;35m• Mudar porta OPENVPN \033[0;37m443 \033[1;31me \033[0;37mSSH 22\033[0m"
-echo -e "\033[0;32m|20|\033[1;35m• Mudar porta SSH \033[0;37m443 \033[1;31me \033[0;37m22 \033[1;31mOPENVPN \033[0;37m1194\033[0m"
-echo -e "\033[1;32m=SISTEMA DE REINICIALIZACAO\n"
-echo -e "\033[0;32m|21|\033[1;35m• Reboot \033[0;37mReinicia o servidor\033[0m"
-echo -e "\033[0;32m|22|\033[1;35m• ReiniciarServicos \033[0;37mSSH, VPN e ProxySquid\033[0m"
-echo -e "\033[1;35m Segure CTRL + X + Y para fechar as edicoes.\n"
-echo -e "\033[1;35m Segure CTRL + C para fechar logs.033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s' "MENU OPENVPN E SSH" ; tput sgr0
 
-read -p " Selecione a opção [0-22]: " opcao
+echo ""
+echo -e "\033[0;32m| 0|\033[1;35m• Sair \033[0;37m(Para sair do script)\033[0m"
+echo -e "\033[0;32m| 1|\033[1;35m• UserCreate \033[0;37m(Criar usuarios SSH)\033[0m"
+echo -e "\033[0;32m| 2|\033[1;35m• UserBackup \033[0;37m(Gerencia backup dos usuarios SSH)\033[0m"
+echo -e "\033[0;32m| 3|\033[1;35m• CpuMonitor \033[0;37m(Monitora o uso da CPU, RAM e UPTIME)\033[0m"
+echo -e "\033[0;32m| 4|\033[1;35m• UserMonitor \033[0;37m(Monitora os usuarios conectados)\033[0m"
+echo -e "\033[0;32m| 5|\033[1;35m• DadosMonitor \033[0;37m(Monitora o uso de dados/Banda|in||out|)\033[0m"
+echo -e "\033[0;32m| 6|\033[1;35m• VNC \033[0;37m(Ativa a interface gráfica no servidor)\033[0m"
+echo -e "\033[0;32m| 7|\033[1;35m• ClearCache \033[0;37m(Limpa cache e swap da maquina)\033[0m"
+echo -e "\033[0;32m| 8|\033[1;35m• OpenUDP \033[0;37m(Libera porta UDP p/ ligacão e jogos no HTTP)\033[0m"
+echo -e "\033[0;32m| 9|\033[1;35m• SpeedTest \033[0;37m(Testa a velocidade de link do servidor)\033[0m"
+echo -e "\033[0;32m|10|\033[1;35m• Banner \033[0;37m(Mensagem para usuario quando conectar)\033[0m"
+echo -e "\033[0;32m|11|\033[1;35m• LimiterSSH \033[0;37m(Limita as conexoes SSH)\033[0m"
+echo -e "\033[0;32m|12|\033[1;35m• MudarLimite \033[0;37m(Muda o limite dos usuario SSH)\033[0m"
+echo -e "\033[0;32m|13|\033[1;35m• MudarSenha \033[0;37m(Muda a senha do usuario)\033[0m"
+echo -e "\033[0;32m|14|\033[1;35m• MudarValidade \033[0;37m(Muda a data de validade do usuario)\033[0m"
+echo -e "\033[0;32m|15|\033[1;35m• DeletarUsuario \033[0;37m(Deleta usuario)\033[0m"
+echo -e "\033[0;32m|16|\033[1;35m• OpenVPN Instalador \033[0;37m(Só execute isso uma única vez)\033[0m"
+echo -e "\033[0;32m|17|\033[1;35m• LimparVencidos \033[0;37m(Limpar usuarios vencidos)\033[0m"
+echo -e "\033[0;32m|18|\033[1;35m• KernelControl \033[0;37m(Procurar update do Kernel ou Remove)\033[0m"
+echo -e "\033[0;32m|19|\033[1;35m• Reboot \033[0;37m(Reinicia o servidor)\033[0m"
+echo -e "\033[0;32m|20|\033[1;35m• ReiniciarServicos \033[0;37m(SSH, VPN e ProxySquid)\033[0m"
+echo -e "\033[0;32m|21|\033[1;35m• SSL - \033[1;37m Para instalar SSL\n"
+echo -e "\033[0;32m|22|\033[1;35m• Python \033[1;37m Instalar Proxy Socks \033[0m"
+echo -e "\033[0;32m|23|\033[1;35m• menudev \033[1;37m- para ver opções de administrador"
+echo -e""
+echo -e "\033[0;32m OBS: Digite - \033[1;31mmenu \033[1;37m- para acessar este sistema"
+echo""
+read -p " Selecione a opção [0-23]: " opcao
+
 
 case $opcao in
-  0)
-echo -e "\033[1;35mVoltando ao menu\033[0m"
-  sleep 3
+ 
+  menu)
+  menu
+  sleep 2
   menu;;
+ 0)
+ echo -e "\033[1;35mvoltando ao Sistema\033[0m"
+ sleep 2
+ exit;;
  1)
-  nano /etc/ssh/sshd_config
+  UserCreate
   sleep 1
-  menudev;;
+  menu;;
  2)
-  nano /etc/openvpn/server.conf
+  UserBackup
   sleep 1
-  menudev;;
+  menu;;
  3)
-  nano etc/openvpn/client-common.txt
-  sleep 1
-  menudev;;
+  CpuMonitor;;
  4)
-  nano /etc/hosts
-  sleep 1
-  menudev;;
+  UserMonitor;;
  5)
-  nano /etc/payloads
-  sleep 1
-  menudev;;
+  DadosMonitor;;
  6)
-  tail -f /var/log/syslog | grep ovpn-server
+  VNC
   sleep 1
-  menudev;;
+  menu;;
  7)
-  nano /etc/squid3/squid.conf
+  ClearCache
   sleep 1
-  menudev;;
+  menu;;
  8)
-  nano /etc/squid/squid.conf
+  OpenUDP
   sleep 1
-  menudev;;
+  menu;;
  9)
-  tail -f /var/log/squid3/access.log
-  sleep 1
-  menudev;;
+  SpeedTest
+  echo ""
+  echo -ne "\033[1;32mEnter..\033[0m"; read
+  menu;;
  10)
-  tail -f /var/log/squid/access.log
+  Banner
   sleep 1
-  menudev;;
+  menu;;
  11)
-  nano /etc/default/stunnel4
+  LimiterSSH
   sleep 1
-  menudev;;
+  menu;;
  12)
-  nano /etc/stunnel/stunnel.conf
+  MudarLimite
   sleep 1
-  menudev;;
+  menu;;
  13)
-  apt-get update && apt-get upgrade -y
+  MudarSenha
   sleep 1
-  menudev;;
+  menu;;
  14)
- apt-get dist-upgrade
- sleep 1
- menudev;;
+  MudarValidade
+  sleep 1
+  menu;;
  15)
- dpkg-reconfigure tzdata
- sleep 1
- menudev;;
+  UserDel
+  sleep 1
+  menu;;
  16)
-  passwd root
+  OpenVPN
   sleep 1
-  menudev;;
+  menu;;
  17)
-  ifconfig
+  UserClear
   sleep 1
-  menudev;;
+  menu;;
  18)
-  do-release-upgrade
+  KernelControl
   sleep 1
-  menudev;;
+  menu;;
  19)
-  ConfVPN
-  sleep 1
-  menudev;;
-  20)
-  ConfVPN
-  sleep 1
-  menudev;;
-  21)
-  echo -e Reiniciando o servidor aguarde...
+ echo -e Reiniciando o servidor aguarde...
   reboot;;
-  22)
+ 20)
   restservice
   sleep 1
-  menudev;;
+  menu;;
+  21)
+  bash stunnel
+  sleep 1
+  menu;;
+  22)
+  screen python pythonsocks.py
+ sleep 1
+  menu;;
+  23)
+  menudev
+  sleep 1
+  menu;;
 esac
