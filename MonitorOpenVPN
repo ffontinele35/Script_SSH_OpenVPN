@@ -40,7 +40,7 @@ echo -e "Conexões: $_conn"
 echo -e "------------------------------"
 fi
 done
-sleep 3
+sleep 10
 done
 }
 monitor
