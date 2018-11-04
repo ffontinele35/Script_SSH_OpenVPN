@@ -29,7 +29,6 @@ echo -e "\033[0;37m=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=
 echo -e ""
 
 while :; do 
-clear
 for _user in $(awk -F: '$3>=1000 {print $1}' /etc/passwd); do
 if [[ ! -z $(cat /etc/openvpn/*.log|grep ,${_user},) ]]; then
 echo -e "------------------------------"
