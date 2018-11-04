@@ -50,6 +50,7 @@ echo -e "\033[0;32m|20|\033[1;35m• Mudar porta SSH \033[0;37m443 \033[1;31me \
 echo -e "\033[1;32m=SISTEMA DE REINICIALIZACAO\n"
 echo -e "\033[0;32m|21|\033[1;35m• Reboot \033[0;37mReinicia o servidor\033[0m"
 echo -e "\033[0;32m|22|\033[1;35m• ReiniciarServicos \033[0;37mSSH, VPN e ProxySquid\033[0m"
+echo -e "\033[0;32m|23|\033[1;35m• UserMonitor \033[0;37m(Monitora os usuarios conectados)\033[0m"
 echo -e "\033[1;35m Segure CTRL + X + Y para fechar as edicoes.\n"
 echo -e "\033[1;35m Segure CTRL + C para fechar logs.033[0m"
 
