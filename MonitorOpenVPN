@@ -40,6 +40,5 @@ echo -e "------------------------------"
 fi
 done
 sleep 10
-done
 }
 monitor
