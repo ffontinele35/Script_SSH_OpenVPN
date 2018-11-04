@@ -20,8 +20,6 @@ cyanClaro="\033[1;36m"
 branco="\033[1;37m"
 
 
-monitor ()
-{
 while :; do 
 echo -e "\033[0;37m=×=×APARECERA SOMENTE SE HOUVER ALGUEM CONECTADO=×=×=×=×=\033[0;30m"
 echo -e "\033[0;37m=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\033[0;30m"
@@ -37,6 +35,5 @@ echo -e "------------------------------"
 fi
 done
 sleep 15
+clear
 done
-}
-monitor
