@@ -1,6 +1,8 @@
 # script ssh
 Teste Virus, Trojan e DDoS Atack
+
 OBS: Um cmd por vez
+
 apt-get update && apt-get upgrade -y
 
 apt-get install git wget -y
