@@ -47,8 +47,13 @@ instalador(){
 }
 
 remover(){
-	apt-get purge stunnel4 -y
-	apt-get autoremove -y
+	service stunnel4 stop
+		apt-get remove stunnel4 -y
+		apt-get autoremove stunnel4 -y
+		apt-get purge stunnel4 -y
+		rm -rf /etc/stunnel/stunnel.conf
+		rm -rf /etc/default/stunnel4
+		rm -rf /etc/stunnel/stunnel.pem
 	clear
 	echo -e "Pronto! O stunnel4 foi removido com sucesso!\n"
 	sleep 2
