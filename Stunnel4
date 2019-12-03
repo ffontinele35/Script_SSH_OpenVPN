@@ -4,7 +4,7 @@
 # editado por @Fontinele
 
 instalador(){
-	apt-get update
+	apt-get update -y
     	apt-get install stunnel4 -y
 	cd /etc/stunnel
 	clear
