@@ -10,9 +10,9 @@ instalador(){
 	clear
         #echo -e "Agora vamos escolher a porta que sera usada para redirecionar a conexao para a porta SSL.\n"
 	read -p "Enter para continuar!"
-	echo ""
+	#echo ""
 	#echo -e "Exemplo: a porta 22 do SSH\n"
-	read -p "Escolha una porta para redirecionar a conexÃ£o SSL? " port_redir
+	#read -p "Escolha una porta para redirecionar a conexÃ£o SSL? " port_redir
 	echo -e "\nExemplo: porta 80 ou 443"
 	echo -e "OBS: Se a porta estiver sendo usada por outro servico remova para nao causar conflito!\n"
 	read -p "Qual porta vai rodar o SSL? " port_ssl
