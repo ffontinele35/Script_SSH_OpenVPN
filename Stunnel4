@@ -4,45 +4,58 @@
 # editado por @Fontinele
 
 instalador(){
-	apt-get update -y
-    	apt-get install stunnel4 -y
-	cd /etc/stunnel
-	clear
-        echo -e "Agora vamos escolher a porta que sera usada para redirecionar a conexao para a porta SSL.\n"
-	read -p "Enter para continuar!"
+	echo -e "\E[44;1;37m           INSTALADOR SSL TUNNEL             \E[0m"
+	echo -e "\n\033[1;33mVC ESTA PRESTES A INSTALAR O SSL TUNNEL !\033[0m"
 	echo ""
-	echo -e "Escolha: a porta 22 do SSH\n"
-	read -p "Escolha una porta para redirecionar a conexÃ£o SSL? " port_redir
-	echo -e "\nExemplo: porta 80 ou 443"
-	echo -e "OBS: Se a porta estiver sendo usada por outro servico remova para nao causar conflito!\n"
-	read -p "Qual porta vai rodar o SSL? " port_ssl
-	printf "cert = /etc/stunnel/stunnel.pem
-	client = no
-	socket = a:SO_REUSEADDR=1
-	socket = l:TCP_NODELAY=1
-	socket = r:TCP_NODELAY=1
-	[ssh]
-	connect = 127.0.0.1:$port_redir
-	accept = $port_ssl" > stunnel.conf
-	openssl genrsa -out key.pem 2048
-	clear
-	echo -e "Nao e obrigatorio, preencha os dados a seguir!\n"
-	echo -e "Apenas de ENTER para continuar.\n\n"
-	openssl req -new -x509 -key key.pem -out cert.pem -days 1095
-	clear
-	cat key.pem cert.pem > /etc/stunnel/stunnel.pem
-	cd /etc/default
-	printf "# /etc/default/stunnel
-	ENABLED=1
-	FILES="/etc/stunnel/*.conf"
-	OPTIONS=""
-	PPP_RESTART=0" > stunnel4
-	clear
-	echo -e "Reiniciando o stunnel4...\n"
-	service stunnel4 restart
-	clear
-	echo -e "O SSL foi instalado e configurado com sucesso!\n"
-	sleep 2
+	echo -ne "\033[1;32mDESEJA CONTINUAR \033[1;31m? \033[1;33m[s/n]:\033[1;37m "; read resposta
+	if [[ "$resposta" = 's' ]]; then
+	echo -e "\n\033[1;33mDEFINA UMA PORTA PARA O SSL TUNNEL !\033[0m"
+	echo ""
+	read -p "$(echo -e "\033[1;32mQUAL PORTA DESEJA UTILIZAR? \033[1;37m")" -e -i 3128 porta
+	if [[ -z "$porta" ]]; then
+		echo ""
+		echo -e "\033[1;31mPorta invalida!"
+		sleep 3
+		clear
+		fun_conexao
+	fi
+	verif_ptrs $porta
+	echo -e "\n\033[1;32mINSTALANDO O SSL TUNNEL !\033[1;33m"
+	echo ""
+	fun_bar 'apt-get update -y' 'apt-get install stunnel4 -y'
+	echo -e "\n\033[1;32mCONFIGURANDO O SSL TUNNEL !\033[0m"
+	echo ""
+	ssl_conf () {
+    echo -e "cert = /etc/stunnel/stunnel.pem\nclient = no\nsocket = a:SO_REUSEADDR=1\nsocket = l:TCP_NODELAY=1\nsocket = r:TCP_NODELAY=1\n\n[stunnel]\nconnect = 127.0.0.1:22\naccept = ${porta}" > /etc/stunnel/stunnel.conf
+    }
+    fun_bar 'ssl_conf'
+    echo -e "\n\033[1;32mCRIANDO CERTIFICADO !\033[0m"
+    echo ""
+    ssl_certif () {
+    crt='FR'
+    openssl genrsa -out key.pem 2048 > /dev/null 2>&1
+    (echo $crt; echo $crt; echo $crt; echo $crt; echo $crt; echo $crt; echo $crt)|openssl req -new -x509 -key key.pem -out cert.pem -days 1050 > /dev/null 2>&1
+    cat cert.pem key.pem >> /etc/stunnel/stunnel.pem
+    rm key.pem cert.pem > /dev/null 2>&1
+    sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
+    }
+    fun_bar 'ssl_certif'
+    echo -e "\n\033[1;32mINICIANDO O SSL TUNNEL !\033[0m"
+    echo ""
+    fun_finssl () {
+    service stunnel4 restart
+    service ssh restart
+    /etc/init.d/stunnel4 restart
+    }
+    fun_bar 'fun_finssl' 'service stunnel4 restart'
+    echo -e "\n\033[1;32mSSL TUNNEL INSTALADO COM SUCESSO !\033[1;31m PORTA: \033[1;33m$porta\033[0m"
+    sleep 3
+    clear
+    fun_conexao
+    else
+    echo -e "\n\033[1;31mRetornando...\033[0m"
+    sleep 3
+    clear
 	menu
 }
 
