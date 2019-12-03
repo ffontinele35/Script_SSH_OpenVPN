@@ -4,7 +4,9 @@
 # editado por @Fontinele
 
 instalador(){
-	fun_bar 'apt-get update -y' 'apt-get install stunnel4 -y'
+	apt-get update -y' 'apt-get install stunnel4 -y'
+	cd /etc/stunnel
+	clear
 	echo -e "\n\033[1;32mCONFIGURANDO O SSL TUNNEL !\033[0m"
 	echo ""
 	ssl_conf () {
